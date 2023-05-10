@@ -10,9 +10,14 @@ To run this locally, you'll need to wait for the big release or run the next ver
 <details>
 <summary>🛠 Here are the 6 terminal commands to do that!</summary>
 
+If you have [Node.js v18.16.0](https://nodejs.org) or higher, here's how to setup Elm Land locally:
+
 ```
-git clone https://github.com/elm-land/elm-land.git
+git clone https://github.com/elm-land/elm-land
+
+cd elm-land
 git checkout release/0.18.2
+
 cd projects/cli
 npm install
 npm link
