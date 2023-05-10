@@ -2,12 +2,12 @@ module Types exposing (..)
 
 import Browser exposing (UrlRequest)
 import Browser.Navigation exposing (Key)
-import Main
+import Main as ElmLand
 import Url exposing (Url)
 
 
 type alias FrontendModel =
-    Main.Model
+    ElmLand.Model
 
 
 type alias BackendModel =
@@ -16,7 +16,7 @@ type alias BackendModel =
 
 
 type alias FrontendMsg =
-    Main.Msg
+    ElmLand.Msg
 
 
 type ToBackend

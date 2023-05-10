@@ -6,7 +6,7 @@ import Html
 import Html.Attributes as Attr
 import Json.Encode
 import Lamdera
-import Main
+import Main as ElmLand
 import Types exposing (..)
 import Url
 
@@ -17,13 +17,13 @@ type alias Model =
 
 app =
     Lamdera.frontend
-        { init = Main.init Json.Encode.null
-        , onUrlRequest = Main.UrlRequested
-        , onUrlChange = Main.UrlChanged
-        , update = Main.update
+        { init = ElmLand.init Json.Encode.null
+        , onUrlRequest = ElmLand.UrlRequested
+        , onUrlChange = ElmLand.UrlChanged
+        , update = ElmLand.update
         , updateFromBackend = updateFromBackend
-        , subscriptions = Main.subscriptions
-        , view = Main.view
+        , subscriptions = ElmLand.subscriptions
+        , view = ElmLand.view
         }
 
 
