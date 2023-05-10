@@ -9,6 +9,7 @@ To run this locally, you'll need to wait for the big release or run the next ver
 
 <details>
 <summary>🛠 Here are the 6 terminal commands to do that!</summary>
+
 ```
 git clone https://github.com/elm-land/elm-land.git
 git checkout release/0.18.2
