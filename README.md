@@ -10,6 +10,8 @@ To run this locally, you'll need to wait for the big release or run the next ver
 <details>
 <summary>🛠 Here are the 6 terminal commands to do that!</summary>
 
+---
+
 If you have [Node.js v18.16.0](https://nodejs.org) or higher, here's how to setup Elm Land locally:
 
 ```
@@ -25,6 +27,9 @@ npm run setup
 ```
 
 From there, run `elm-land -v` to see if `v0.19.0` gets printed out!
+
+---
+
 </details>
 
 
