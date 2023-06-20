@@ -16,7 +16,7 @@ page : Shared.Model -> Route () -> Page Model Msg
 page shared route =
     Page.new
         { init = init
-        , update = update shared
+        , update = update
         , subscriptions = subscriptions
         , view = view shared
         }
@@ -45,8 +45,8 @@ type Msg
     = SmashedLikeButton
 
 
-update : Shared.Model -> Msg -> Model -> ( Model, Effect Msg )
-update shared msg model =
+update : Msg -> Model -> ( Model, Effect Msg )
+update msg model =
     case msg of
         SmashedLikeButton ->
             ( model
