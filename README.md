@@ -1,5 +1,5 @@
 # @elm-land/lamdera
-> A demo of running [Lamdera](https://lamdera.com/) and [Elm Land](https://elm.land) together, for Mario!
+> How to use [Lamdera](https://lamdera.com/) and [Elm Land](https://elm.land) together!
 
 ![A screenshot of the app running](./screenshot.png)
 
