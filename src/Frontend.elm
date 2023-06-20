@@ -7,6 +7,10 @@ import Html.Attributes as Attr
 import Json.Encode
 import Lamdera
 import Main as ElmLand
+import Pages.Home_
+import Shared.Msg
+import Task
+import Time
 import Types exposing (..)
 import Url
 
@@ -30,5 +34,10 @@ app =
 updateFromBackend : ToFrontend -> Model -> ( Model, Cmd FrontendMsg )
 updateFromBackend msg model =
     case msg of
-        NoOpToFrontend ->
-            ( model, Cmd.none )
+        NewSmashedLikes smashedLikes ->
+            ( model, sendSharedMsg <| Shared.Msg.GotNewSmashedLikes smashedLikes )
+
+
+sendSharedMsg : Shared.Msg.Msg -> Cmd FrontendMsg
+sendSharedMsg msg =
+    Time.now |> Task.perform (always (ElmLand.Shared msg))

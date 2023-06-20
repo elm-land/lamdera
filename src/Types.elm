@@ -1,7 +1,9 @@
 module Types exposing (..)
 
+import Bridge
 import Browser exposing (UrlRequest)
 import Browser.Navigation exposing (Key)
+import Lamdera exposing (ClientId, SessionId)
 import Main as ElmLand
 import Url exposing (Url)
 
@@ -11,7 +13,7 @@ type alias FrontendModel =
 
 
 type alias BackendModel =
-    { message : String
+    { smashedLikes : Int
     }
 
 
@@ -19,13 +21,13 @@ type alias FrontendMsg =
     ElmLand.Msg
 
 
-type ToBackend
-    = NoOpToBackend
+type alias ToBackend =
+    Bridge.ToBackend
 
 
 type BackendMsg
-    = NoOpBackendMsg
+    = OnConnect SessionId ClientId
 
 
 type ToFrontend
-    = NoOpToFrontend
+    = NewSmashedLikes Int
